@@ -12,26 +12,6 @@
 **DATA STRUCTURE**
 ---
 
-1. **Raw Data Format**
-
-+ Total Samples: 70,000
-+ Image Data: 28×28 pixel grayscale images
-+ Pixel Value Range: 0-255 (8-bit grayscale)
-+ Color Channels: 1 (grayscale)
-+ Label Data: Integer class labels from 0-9
-
-2. **Class Labels**
-
-- 0: T-shirt/top
-- 1: Trouser
-- 2: Pullover
-- 3: Dress
-- 4: Coat
-- 5: Sandal
-- 6: Shirt
-- 7: Sneaker
-- 8: Bag
-- 9: Ankle boot
 
 **PRIVACY NOTICE**
 ---
