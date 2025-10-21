@@ -58,6 +58,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent documentation updates and feature additions ([b062aac](https://github.com///commit/b062aac3c033638102c7329216e189eaf5e4d8a9))
 - update CHANGELOG.md with recent feature additions and improvements ([f624c2c](https://github.com///commit/f624c2c44f3366bbd05e54bcf39e94e392d4fc40))
 - update uv.lock file ([b1d225e](https://github.com///commit/b1d225eda7e650cf7d5e7057db2360243371fb7b))
 - update CHANGELOG.md with recent features and code refactoring details ([2ebdd42](https://github.com///commit/2ebdd426a989996ad74306654a0774d18336fa3e))
@@ -67,6 +68,8 @@
 
 ### Docs
 
+- enhance README.md with improved formatting for RNN project overview ([6bc4687](https://github.com///commit/6bc468774d8cadc10f4b0fe70b0a85b533b49538))
+- enhance project overview in README.zh-CN.md with improved formatting and clarity ([f7ab145](https://github.com///commit/f7ab145400161b6822b72e4cca322e9c7f963055))
 - update README.zh-CN.md to enhance project overview and clarify RNN implementation details ([445ff93](https://github.com///commit/445ff93b892e4f191cdb1e8aec6e5c41caba511c))
 - update README.md to include project overview and integration details ([c0d19e1](https://github.com///commit/c0d19e1350a99346a6d440965c095f52ea0014b3))
 
