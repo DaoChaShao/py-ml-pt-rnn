@@ -5,6 +5,14 @@
 
 **INTRODUCTION**
 ---
+This project demonstrates the complete process of building and training a Recurrent Neural Network (RNN) using PyTorch,
+combined with PySide6 to create an interactive graphical interface for visualizing model training and prediction
+results. The project also integrates jieba or THULAC, two popular Chinese word segmentation tools, for text
+preprocessing and sequence modeling tasks.
+
+By combining algorithm implementation with visual interaction, this project helps learners build a complete
+understanding of the RNN workflow — from data preprocessing to model training and visual output, enabling both
+conceptual and practical mastery of sequence modeling.
 
 **DATA DESCRIPTION**
 ---
