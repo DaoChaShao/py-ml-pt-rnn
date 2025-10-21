@@ -14,6 +14,7 @@ BASE_DIRECTORY = Path(__file__).resolve().parent.parent
 MODEL_SAVE_PATH = BASE_DIRECTORY / "models/model.pth"
 # Example, train and test dataset path
 EXAMPLES_CHINESE_PATH = BASE_DIRECTORY / "data/Chinese.txt"
+EXAMPLES_CHINESE_STOPWORDS_PATH = BASE_DIRECTORY / "data/stopwords4background.txt"
 TRAIN_DATASET_PATH = BASE_DIRECTORY / "data/"
 TEST_DATASET_PATH = BASE_DIRECTORY / "data/"
 
