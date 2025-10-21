@@ -5,6 +5,12 @@
 
 ### Features
 
+- update pyproject.toml to add new dependencies for NLP and data processing ([a041005](https://github.com///commit/a041005e76dffdb24fda55baf4c782485fe6fade))
+- add read_file function to read and print file content ([5a991db](https://github.com///commit/5a991db3d3a748dc817aee4e42f873752990004c))
+- create nlp.py for natural language processing functionalities ([0c8b7bc](https://github.com///commit/0c8b7bcc60c71fcecfb76f5af5abc8219cf30e42))
+- update config.py to include path for Chinese dataset example ([e5d9d48](https://github.com///commit/e5d9d48ecd71b45e80e33718fe2263f4b8adb3d0))
+- add Chinese.txt as data ([c4ef4f8](https://github.com///commit/c4ef4f86658a7b69ee3ab5634a39c96f4b9eb8d7))
+- add .gitignore to exclude Python-generated files and IDE-specific directories ([0e6968c](https://github.com///commit/0e6968c2bc50b01ce5d5993431142eb7dfc14772))
 - add NumpyRandomSeed context manager and data processing functions for enhanced data handling and analysis ([f1fe8a8](https://github.com///commit/f1fe8a89249a3bb253c33ba81bfe892a9a54babe))
 - implement TorchRandomSeed context manager and custom DataLoader for enhanced data handling and reproducibility ([85db139](https://github.com///commit/85db1395c8b5a97778a00897dcc76a5b5d930f5a))
 - add text highlighting and formatting functions for improved output presentation ([fa3af5b](https://github.com///commit/fa3af5bed9c43e2c6ec922f8bc777f4ed8bab152))
@@ -23,7 +29,6 @@
 - add criterion.py with initial file structure and metadata ([54a779c](https://github.com///commit/54a779c1073f9d0ebb7b12ca9b2d6a646ca43053))
 - add config.py with initial metadata and versioning information ([626e9d8](https://github.com///commit/626e9d851c8413ed9edea503e62309b3e709e619))
 - add __init__.py with main function and metadata ([a91f62c](https://github.com///commit/a91f62c08150c33121bd22af2459da1f27b8b580))
-- add .gitignore to exclude Python-generated files and IDE-specific directories ([977e9bc](https://github.com///commit/977e9bc5badcc931d5d5401af2ed555cb0d3ad71))
 - add CHANGELOG.md for version 0.1.0 with project features and chores ([3e27947](https://github.com///commit/3e27947c5fa5502fabd3363ed96281384d185b5c))
 - add Chinese localization for project documentation in README.zh-CN.md ([5dc7856](https://github.com///commit/5dc7856b2cfb0cfa5de605a0d4e2dc47261bfd51))
 - add comprehensive project documentation to README.md ([f1d9751](https://github.com///commit/f1d975155955be5bead4a07a9b32d77fa907d9a2))
@@ -35,6 +40,8 @@
 
 ### Chore
 
+- update uv.lock file ([b1d225e](https://github.com///commit/b1d225eda7e650cf7d5e7057db2360243371fb7b))
+- update CHANGELOG.md with recent features and code refactoring details ([2ebdd42](https://github.com///commit/2ebdd426a989996ad74306654a0774d18336fa3e))
 - update .gitignore to include PyCharm files and ensure proper exclusion of virtual environments ([217a70b](https://github.com///commit/217a70b655dd46a246717f0b177e9d0749de57c9))
 - add .python-version file to specify Python version 3.12 ([7ab615c](https://github.com///commit/7ab615c9ae966dbfa95c0e8d291a6fe3c495fa53))
 - add .gitignore to exclude Python-generated files and virtual environments ([f5c5ef1](https://github.com///commit/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602))
