@@ -4,7 +4,17 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "jieba>=0.42.1",
+    "numpy>=2.3.4",
+    "pandas>=2.3.3",
+    "pandas-stubs>=2.3.2.250926",
+    "pyside6>=6.10.0",
+    "scikit-learn>=1.7.2",
+    "spacy>=3.8.7",
+    "thulac>=0.2.2",
+    "torch>=2.9.0",
+]
 
 [tool.git-changelog]
 bump = "auto"
@@ -25,5 +35,7 @@ zerover = false
 
 [dependency-groups]
 dev = [
+    "black>=25.9.0",
     "git-changelog>=2.6.3",
+    "ruff>=0.14.1",
 ]
