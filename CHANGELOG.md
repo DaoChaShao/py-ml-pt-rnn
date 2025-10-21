@@ -1,10 +1,28 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602...0.1.0) (2025-10-21)
+## [0.1.0](https://github.com///compare/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602...0.1.0) (2025-10-22)
 
 ### Features
 
+- add THU.py for text segmentation using THULAC ([55e4d8f](https://github.com///commit/55e4d8ff7c32fb91f53133c9f72ebcf1960327d8))
+- add stopwords for background processing in Chinese text ([e80e968](https://github.com///commit/e80e968c09a8bdb1ee9bccce4950336e0d19d320))
+- add regular_chinese function to filter and retain only Chinese characters from a list ([87aa84e](https://github.com///commit/87aa84e0914fb7db9d1c42beacd1710678d58402))
+- implement main function to read content from examples Chinese path ([5d0ee29](https://github.com///commit/5d0ee29ca9c9ba1206370f05793d2ed36a3b2083))
+- add JB.py for text processing with jieba and TF-IDF/TextRank extraction ([02324fb](https://github.com///commit/02324fb5fb8b17e155782917cbe86eedc29a2108))
+- enhance timer output formatting with configurable length ([4261d40](https://github.com///commit/4261d409bc0b25005a5dee8a8853f8710060f5eb))
+- add stopwords file path for background processing in Chinese text ([951397b](https://github.com///commit/951397b183bda7072150e289845d4f9570d014eb))
+- add 03_rnn_layer.py for RNN layer implementation and example usage ([ec0bf08](https://github.com///commit/ec0bf087ed46e0aa73f3eb359c4f07b0479cee52))
+- add 02_thu_05_embedding.py for word embedding and vocabulary mapping in Chinese text processing ([da947a1](https://github.com///commit/da947a1ae30b6d470abdf0bd6993f664a0085c3f))
+- add 02_thu_04_id2word.py for id-to-word and word-to-id mapping in Chinese text processing ([2bbdad1](https://github.com///commit/2bbdad19e6b5882dd29f5c1ec20d72cf4b81a429))
+- add 02_thu_03_re.py for Chinese text processing and regularization ([3e10e21](https://github.com///commit/3e10e21af7900ceb8c2263edc6a0668553fa384d))
+- add 02_thu_02_stopwords.py for stopwords filtering in Chinese text segmentation ([553c832](https://github.com///commit/553c8329a42b77a40f081f7438f3afa6a1750874))
+- add 02_thu_01_cut.py for Chinese text cutting and segmentation functionalities ([aa1a3e7](https://github.com///commit/aa1a3e765a8b4ca2ffe7723d43eaea76f9716547))
+- add 01_jieba_05_embedding.py for word embedding and vocabulary processing ([f05c6dd](https://github.com///commit/f05c6ddcec9f6cb74c170d3ec14663e4cf793e77))
+- add 01_jieba_04_id2word.py for word-to-id mapping and stopwords filtering ([50a3984](https://github.com///commit/50a3984aa4299008898cdb593c9e20276e7d5f1f))
+- add 01_jieba_03_re.py for Chinese text processing and stopwords removal ([5fc5ee0](https://github.com///commit/5fc5ee01421964760ef98d43db9db53d118b829f))
+- add 01_jieba_02_stopwords.py for stopwords removal in Chinese text segmentation ([2a8758e](https://github.com///commit/2a8758e19327f178038d0e37f62225dee02f39db))
+- add 01_jieba_01_cut.py for Chinese text segmentation functionalities ([4c607d6](https://github.com///commit/4c607d603bbc9d5101652eb009079849a5f0068d))
 - update pyproject.toml to add new dependencies for NLP and data processing ([a041005](https://github.com///commit/a041005e76dffdb24fda55baf4c782485fe6fade))
 - add read_file function to read and print file content ([5a991db](https://github.com///commit/5a991db3d3a748dc817aee4e42f873752990004c))
 - create nlp.py for natural language processing functionalities ([0c8b7bc](https://github.com///commit/0c8b7bcc60c71fcecfb76f5af5abc8219cf30e42))
@@ -40,6 +58,7 @@
 
 ### Chore
 
+- update CHANGELOG.md with recent feature additions and improvements ([57b3a1d](https://github.com///commit/57b3a1d8c5c31310beef23cefd1b8700d769bf3d))
 - update uv.lock file ([b1d225e](https://github.com///commit/b1d225eda7e650cf7d5e7057db2360243371fb7b))
 - update CHANGELOG.md with recent features and code refactoring details ([2ebdd42](https://github.com///commit/2ebdd426a989996ad74306654a0774d18336fa3e))
 - update .gitignore to include PyCharm files and ensure proper exclusion of virtual environments ([217a70b](https://github.com///commit/217a70b655dd46a246717f0b177e9d0749de57c9))
