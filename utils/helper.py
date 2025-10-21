@@ -112,3 +112,10 @@ class RandomSeed:
     def __repr__(self):
         """ Return a string representation of the random seed """
         return f"{self._description!r} is set to randomness {self._seed}."
+
+
+def read_file(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        content = file.read()
+        print(f"The content:\n{content}")
+    return content
