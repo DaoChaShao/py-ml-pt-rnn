@@ -9,6 +9,10 @@
 from random import seed as rnd_seed, getstate, setstate
 from time import perf_counter
 
+from utils.decorator import timer
+
+LENGTH: int = 50
+
 
 class Timer(object):
     """ timing code blocks using a context manager """
@@ -27,9 +31,9 @@ class Timer(object):
     def __enter__(self):
         """ Start the timer """
         self._start = perf_counter()
-        print("*" * 50)
+        print("*" * LENGTH)
         print(f"{self._description} has started.")
-        print("-" * 50)
+        print("-" * LENGTH)
         return self
 
     def __exit__(self, *args):
@@ -37,9 +41,9 @@ class Timer(object):
         self._end = perf_counter()
         self._elapsed = self._end - self._start
 
-        print("-" * 50)
+        print("-" * LENGTH)
         print(f"{self._description} took {self._elapsed:.{self._precision}f} seconds.")
-        print("*" * 50)
+        print("*" * LENGTH)
 
     def __repr__(self):
         """ Return a string representation of the timer """
@@ -59,16 +63,16 @@ class Beautifier(object):
 
     def __enter__(self):
         """ Start the beautifier """
-        print("*" * 50)
+        print("*" * LENGTH)
         print(f"The block named {self._description!r} is starting:")
-        print("-" * 50)
+        print("-" * LENGTH)
         return self
 
     def __exit__(self, *args):
         """ Stop the beautifier """
-        print("-" * 50)
+        print("-" * LENGTH)
         print(f"The block named {self._description!r} has completed.")
-        print("*" * 50)
+        print("*" * LENGTH)
         print()
 
 
@@ -92,9 +96,9 @@ class RandomSeed:
         # Set the new random seed
         rnd_seed(self._seed)
 
-        print("*" * 50)
+        print("*" * LENGTH)
         print(f"{self._description!r} has been set randomness {self._seed}.")
-        print("-" * 50)
+        print("-" * LENGTH)
 
         return self
 
@@ -104,9 +108,9 @@ class RandomSeed:
         if self._previous_py_seed is not None:
             setstate(self._previous_py_seed)
 
-        print("-" * 50)
+        print("-" * LENGTH)
         print(f"{self._description!r} has been restored to previous randomness.")
-        print("*" * 50)
+        print("*" * LENGTH)
         print()
 
     def __repr__(self):
@@ -114,6 +118,7 @@ class RandomSeed:
         return f"{self._description!r} is set to randomness {self._seed}."
 
 
+@timer
 def read_file(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
