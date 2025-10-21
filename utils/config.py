@@ -12,7 +12,8 @@ from pathlib import Path
 BASE_DIRECTORY = Path(__file__).resolve().parent.parent
 # Model save path
 MODEL_SAVE_PATH = BASE_DIRECTORY / "models/model.pth"
-# Train and test dataset path
+# Example, train and test dataset path
+EXAMPLES_CHINESE_PATH = BASE_DIRECTORY / "data/Chinese.txt"
 TRAIN_DATASET_PATH = BASE_DIRECTORY / "data/"
 TEST_DATASET_PATH = BASE_DIRECTORY / "data/"
 
