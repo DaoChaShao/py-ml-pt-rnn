@@ -58,12 +58,17 @@
 
 ### Chore
 
-- update CHANGELOG.md with recent feature additions and improvements ([57b3a1d](https://github.com///commit/57b3a1d8c5c31310beef23cefd1b8700d769bf3d))
+- update CHANGELOG.md with recent feature additions and improvements ([f624c2c](https://github.com///commit/f624c2c44f3366bbd05e54bcf39e94e392d4fc40))
 - update uv.lock file ([b1d225e](https://github.com///commit/b1d225eda7e650cf7d5e7057db2360243371fb7b))
 - update CHANGELOG.md with recent features and code refactoring details ([2ebdd42](https://github.com///commit/2ebdd426a989996ad74306654a0774d18336fa3e))
 - update .gitignore to include PyCharm files and ensure proper exclusion of virtual environments ([217a70b](https://github.com///commit/217a70b655dd46a246717f0b177e9d0749de57c9))
 - add .python-version file to specify Python version 3.12 ([7ab615c](https://github.com///commit/7ab615c9ae966dbfa95c0e8d291a6fe3c495fa53))
 - add .gitignore to exclude Python-generated files and virtual environments ([f5c5ef1](https://github.com///commit/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602))
+
+### Docs
+
+- update README.zh-CN.md to enhance project overview and clarify RNN implementation details ([445ff93](https://github.com///commit/445ff93b892e4f191cdb1e8aec6e5c41caba511c))
+- update README.md to include project overview and integration details ([c0d19e1](https://github.com///commit/c0d19e1350a99346a6d440965c095f52ea0014b3))
 
 ### Code Refactoring
 
