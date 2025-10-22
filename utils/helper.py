@@ -6,7 +6,9 @@
 # @File     :   helper.py
 # @Desc     :   
 
+from json import load
 from random import seed as rnd_seed, getstate, setstate
+from pathlib import Path
 from time import perf_counter
 
 from utils.decorator import timer
@@ -119,8 +121,26 @@ class RandomSeed:
 
 
 @timer
-def read_file(file_path):
-    with open(file_path, "r", encoding="utf-8") as file:
+def read_file(file_path: str | Path) -> str:
+    """ Read content from a file
+    :param file_path: path to the file
+    :return: content read from the file
+    """
+    with open(str(file_path), "r", encoding="utf-8") as file:
         content = file.read()
         print(f"The content:\n{content}")
     return content
+
+
+@timer
+def load_json(json_path: str | Path) -> dict:
+    """ Load JSON data from a file
+    :param json_path: path to the JSON file
+    :return: data loaded from the JSON file
+    """
+    with open(str(json_path), "r", encoding="utf-8") as file:
+        data: dict = load(file)
+
+    print(f"JSON data loaded from {json_path}:")
+
+    return data
