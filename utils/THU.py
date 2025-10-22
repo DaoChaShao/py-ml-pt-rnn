@@ -12,7 +12,7 @@ from utils.decorator import timer
 
 
 @timer
-def cut_segmentation(text: str) -> tuple[list[tuple[str, str]], list[str]]:
+def cut_pos(text: str) -> tuple[list[tuple[str, str]], list[str]]:
     """ Cut text using THULAC
     :param text: text to cut
     :return: list of tuples of cut words and their POS tags
