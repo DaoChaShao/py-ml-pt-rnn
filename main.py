@@ -6,13 +6,9 @@
 # @File     :   main.py
 # @Desc     :
 
-from utils.config import EXAMPLES_CHINESE_PATH
-from utils.helper import read_file
-
 
 def main() -> None:
     """ Main Function """
-    content = read_file(EXAMPLES_CHINESE_PATH)
 
 
 if __name__ == "__main__":
