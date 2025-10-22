@@ -6,14 +6,14 @@
 # @File     :   02_thu_01_cut.py
 # @Desc     :   
 
-from utils.config import EXAMPLES_CHINESE_PATH
+from utils.config import CONFIG
 from utils.helper import read_file
 from utils.THU import cut_only, cut_pos
 
 
 def main() -> None:
     """ Main Function """
-    content = read_file(EXAMPLES_CHINESE_PATH)
+    content = read_file(CONFIG.FILEPATHS.EXAMPLE_PAPER_ZH)
 
     words = cut_only(content)
     vocabs = cut_pos(content)
