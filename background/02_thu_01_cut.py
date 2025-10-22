@@ -8,7 +8,7 @@
 
 from utils.config import EXAMPLES_CHINESE_PATH
 from utils.helper import read_file
-from utils.THU import cut_only, cut_segmentation
+from utils.THU import cut_only, cut_pos
 
 
 def main() -> None:
@@ -16,7 +16,7 @@ def main() -> None:
     content = read_file(EXAMPLES_CHINESE_PATH)
 
     words = cut_only(content)
-    vocabs = cut_segmentation(content)
+    vocabs = cut_pos(content)
 
     print(words)
     print(vocabs)
