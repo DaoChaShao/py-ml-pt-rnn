@@ -6,32 +6,77 @@
 # @File     :   config.py
 # @Desc     :   
 
+from dataclasses import dataclass, field
 from pathlib import Path
+from types import SimpleNamespace
 
 # Set base directory
-BASE_DIRECTORY = Path(__file__).resolve().parent.parent
-# Model save path
-MODEL_SAVE_PATH = BASE_DIRECTORY / "models/model.pth"
-# Example, train and test dataset path
-EXAMPLES_CHINESE_PATH = BASE_DIRECTORY / "data/Chinese.txt"
-EXAMPLES_CHINESE_STOPWORDS_PATH = BASE_DIRECTORY / "data/stopwords4background.txt"
-TRAIN_DATASET_PATH = BASE_DIRECTORY / "data/"
-TEST_DATASET_PATH = BASE_DIRECTORY / "data/"
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Data processing parameters
-RANDOM_STATE: int = 27
-VALID_SIZE: float = 0.2
-IS_SHUFFLE: bool = True
+# Configuration dictionary
+CONFIGRATION: SimpleNamespace = SimpleNamespace(
+    # File paths
+    PATHS=SimpleNamespace(
+        MODEL_SAVE=BASE_DIR / "models/model.pth",
+        EXAMPLE_PAPER_ZH=BASE_DIR / "data/Chinese.txt",
+        EXAMPLE_STOPWORDS_ZH=BASE_DIR / "data/stopwords4background.txt",
+        DATASET_TRAIN=BASE_DIR / "data/",
+        DATASET_SET=BASE_DIR / "data/",
+    ),
+    # Preprocessing settings
+    PREPROCESSOR=SimpleNamespace(
+        RANDOM_STATE=27,
+        VALID_SIZE=0.2,
+        IS_SHUFFLE=True,
+        PCA_VARIANCE_THRESHOLD=0.95,
+    ),
+    # Training hyperparameters
+    HYPERPARAMETERS=SimpleNamespace(
+        BATCH_SIZE=32,
+        HIDDEN_UNITS=128,
+        ALPHA=0.01,
+        ALPHA4REDUCTION=0.3,
+        EPOCHS=20,
+        ACCELERATOR="cpu",
+    ),
+)
 
-# PCA parameters
-PCA_VARIANCE_THRESHOLD: float = 0.95
 
-# Dataset & Dataloader settings
-BATCHES: int = 32
+@dataclass
+class Paths:
+    MODEL_SAVE: Path = BASE_DIR / "models/model.pth"
+    EXAMPLE_PAPER_ZH: Path = BASE_DIR / "data/Chinese.txt"
+    EXAMPLE_STOPWORDS_ZH: Path = BASE_DIR / "data/stopwords4background.txt"
+    POEMS_JSON: Path = BASE_DIR / "data/poems.json"
+    POEMS: Path = BASE_DIR / "data/poems.txt"
+    DATASET_TRAIN: Path = BASE_DIR / "data/"
+    DATASET_TEST: Path = BASE_DIR / "data/"
 
-# Training hyperparameters
-HIDDEN_UNITS: int = 128
-ALPHA: float = 0.01
-ALPHA4REDUCTION: float = 0.3
-EPOCHS: int = 20
-ACCELERATOR: str = "cpu"
+
+@dataclass
+class Preprocessor:
+    RANDOM_STATE: int = 27
+    VALID_SIZE: float = 0.2
+    IS_SHUFFLE: bool = True
+    PCA_VARIANCE_THRESHOLD: float = 0.95
+
+
+@dataclass
+class Hyperparameters:
+    BATCH_SIZE: int = 32
+    HIDDEN_UNITS: int = 128
+    ALPHA: float = 0.01
+    ALPHA_REDUCTION: float = 0.3
+    EPOCHS: int = 20
+    ACCELERATOR: str = "cpu"
+
+
+@dataclass
+class Configration:
+    FILEPATHS: Paths = field(default_factory=Paths)
+    PREPROCESSOR: Preprocessor = field(default_factory=Preprocessor)
+    HYPERPARAMETERS: Hyperparameters = field(default_factory=Hyperparameters)
+
+
+# Singleton instance of Config
+CONFIG = Configration()
