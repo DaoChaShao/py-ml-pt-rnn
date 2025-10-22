@@ -6,17 +6,17 @@
 # @File     :   01_jieba_02_stopwords.py
 # @Desc     :   
 
-from utils.config import EXAMPLES_CHINESE_PATH, EXAMPLES_CHINESE_STOPWORDS_PATH
+from utils.config import CONFIG
 from utils.helper import read_file
 from utils.JB import cut_accuracy
 
 
 def main() -> None:
     """ Main Function """
-    content: str = read_file(EXAMPLES_CHINESE_PATH)
+    content: str = read_file(CONFIG.FILEPATHS.EXAMPLE_PAPER_ZH)
 
     # Read stopwords from file without repeats
-    stopwords: set[str] = set(read_file(EXAMPLES_CHINESE_STOPWORDS_PATH).splitlines())
+    stopwords: set[str] = set(read_file(CONFIG.FILEPATHS.EXAMPLE_STOPWORDS_ZH).splitlines())
     print(stopwords)
 
     words = cut_accuracy(content)
