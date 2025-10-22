@@ -1,10 +1,16 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602...0.1.0) (2025-10-22)
+## [0.1.0](https://github.com///compare/f5c5ef1cfc0c6bb2c2ca278dd7190efd9ee7c602...0.1.0) (2025-10-23)
 
 ### Features
 
+- add a trained sequential model_seq.pth for sequence generation prediction ([1517d19](https://github.com///commit/1517d196c40aff3a210c7acc7e7396d1a0f0386f))
+- implement TorchTrainer class for managing training and validation processes ([06a241d](https://github.com///commit/06a241d4155e2a954f06fdf29e028399bf9ec111))
+- add SequentialTorchDataset class for handling sequential features and labels ([4f256c8](https://github.com///commit/4f256c8121dfccabccb95b940ef930927591cd37))
+- add functions to extract unique characters and Chinese characters from text ([99eb0df](https://github.com///commit/99eb0df95a2d4a4634a9a213aa304f0ddef6ba3c))
+- implement character-level RNN model in model.py ([afdc93e](https://github.com///commit/afdc93ed4235734d23116e2e3395201a2148b140))
+- implement data preprocessing and preparation functions for training model ([105aa58](https://github.com///commit/105aa5814c5c84c2176529ecf71cce0680b98b39))
 - add a collection of classical Chinese poems in poems.txt ([da765b8](https://github.com///commit/da765b86bffb991c625a9d34ff0ae400923a107f))
 - add a collection of classical Chinese poems in poems.json ([e50ecec](https://github.com///commit/e50ecec0843d5e72ec21d976a89bec98691a3e30))
 - add protobuf and stanfordnlp packages to uv.lock ([90cae2d](https://github.com///commit/90cae2d357c28a466436b7b54c9a22dac36b2275))
@@ -71,6 +77,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature additions and bug fixes ([fa4a0c9](https://github.com///commit/fa4a0c9a387185f77d38b7e9d8319c4ffa5ac5d8))
 - update CHANGELOG.md to include recent bug fixes and feature enhancements ([f6802b1](https://github.com///commit/f6802b1d99c6d48617a76ad35a1a97c0175c0c1b))
 - update CHANGELOG.md to reflect recent documentation enhancements and feature additions ([e947d3f](https://github.com///commit/e947d3f413c745e7f03ebd6c777cb1585b18fef1))
 - update CHANGELOG.md to include recent documentation updates and feature additions ([b062aac](https://github.com///commit/b062aac3c033638102c7329216e189eaf5e4d8a9))
@@ -90,6 +97,7 @@
 
 ### Code Refactoring
 
+- update configuration in config.py to improve organization and add model parameters ([a761662](https://github.com///commit/a7616628c927778ff4bedf690290d9c3edcb7a48))
 - enhance file reading functions in helper.py to support Path objects and add JSON loading functionality ([f113f9a](https://github.com///commit/f113f9abef93ef20738b4982bae2bc9e72492daf))
 - restructure configuration in config.py to use dataclasses for better organization ([bee53d6](https://github.com///commit/bee53d6abbc96b48b0c44d3b871d7277988bef2a))
 - update file paths in 02_thu_05_embedding.py to use centralized configuration ([d11a16e](https://github.com///commit/d11a16ed0f89be9d59805cdcce3758da0ae37898))
