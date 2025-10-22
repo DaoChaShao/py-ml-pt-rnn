@@ -5,6 +5,13 @@
 
 ### Features
 
+- add protobuf and stanfordnlp packages to uv.lock ([90cae2d](https://github.com///commit/90cae2d357c28a466436b7b54c9a22dac36b2275))
+- add thulac_pos.json for part-of-speech tagging definitions ([bddcc29](https://github.com///commit/bddcc294a8e9db9acef67556c24735f86140e44e))
+- add stanfordnlp dependency to pyproject.toml ([b94f55c](https://github.com///commit/b94f55c3c0f5b1e50f95eedf9276710b8d803f79))
+- add nltk_pos.json for part-of-speech tagging definitions ([b41b05c](https://github.com///commit/b41b05c33181459dfe559b1e2f995751ccd119b6))
+- add word frequency counting and StanfordNLP analysis functions ([ae64a4e](https://github.com///commit/ae64a4ec3c661e76842d570cd02207e7b1af199d))
+- add jieba_pos.json for part-of-speech tagging definitions ([d1c13db](https://github.com///commit/d1c13db5ea23f313241c1f124682d0b61e5d5471))
+- refactor text processing functions to use 'content' parameter and add POS tagging functionality ([d81c368](https://github.com///commit/d81c3687b862b087948b8afb28caea7a8c3de9d3))
 - add THU.py for text segmentation using THULAC ([55e4d8f](https://github.com///commit/55e4d8ff7c32fb91f53133c9f72ebcf1960327d8))
 - add stopwords for background processing in Chinese text ([e80e968](https://github.com///commit/e80e968c09a8bdb1ee9bccce4950336e0d19d320))
 - add regular_chinese function to filter and retain only Chinese characters from a list ([87aa84e](https://github.com///commit/87aa84e0914fb7db9d1c42beacd1710678d58402))
@@ -56,8 +63,13 @@
 - add pyproject.toml for project configuration and dependencies ([be33b77](https://github.com///commit/be33b7718224645e05e60aba409a64fe915f6597))
 - create main.py with initial main function and UTF-8 encoding ([ac32161](https://github.com///commit/ac321610227635750a4584e28e5c3629fe8aae99))
 
+### Bug Fixes
+
+- update import and function call for POS tagging in 02_thu_01_cut.py ([7d595be](https://github.com///commit/7d595beb2a44de2548001cf07813f088c6cd8f70))
+
 ### Chore
 
+- update CHANGELOG.md to reflect recent documentation enhancements and feature additions ([e947d3f](https://github.com///commit/e947d3f413c745e7f03ebd6c777cb1585b18fef1))
 - update CHANGELOG.md to include recent documentation updates and feature additions ([b062aac](https://github.com///commit/b062aac3c033638102c7329216e189eaf5e4d8a9))
 - update CHANGELOG.md with recent feature additions and improvements ([f624c2c](https://github.com///commit/f624c2c44f3366bbd05e54bcf39e94e392d4fc40))
 - update uv.lock file ([b1d225e](https://github.com///commit/b1d225eda7e650cf7d5e7057db2360243371fb7b))
@@ -75,5 +87,7 @@
 
 ### Code Refactoring
 
+- rename cut_segmentation to cut_pos for clarity ([6fff219](https://github.com///commit/6fff2190e0c6736f8062141999ac1498bbffffea))
+- remove unused imports and streamline main function ([9f17e86](https://github.com///commit/9f17e8602af06a12c96d222f4889e017e491ef09))
 - remove outdated data structure details from README.md ([d17a49a](https://github.com///commit/d17a49a9830fba6287f1daad1461eeeaa3f9f66d))
 
