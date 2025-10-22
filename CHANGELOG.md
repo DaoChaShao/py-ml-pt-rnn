@@ -5,6 +5,8 @@
 
 ### Features
 
+- add a collection of classical Chinese poems in poems.txt ([da765b8](https://github.com///commit/da765b86bffb991c625a9d34ff0ae400923a107f))
+- add a collection of classical Chinese poems in poems.json ([e50ecec](https://github.com///commit/e50ecec0843d5e72ec21d976a89bec98691a3e30))
 - add protobuf and stanfordnlp packages to uv.lock ([90cae2d](https://github.com///commit/90cae2d357c28a466436b7b54c9a22dac36b2275))
 - add thulac_pos.json for part-of-speech tagging definitions ([bddcc29](https://github.com///commit/bddcc294a8e9db9acef67556c24735f86140e44e))
 - add stanfordnlp dependency to pyproject.toml ([b94f55c](https://github.com///commit/b94f55c3c0f5b1e50f95eedf9276710b8d803f79))
@@ -69,6 +71,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent bug fixes and feature enhancements ([f6802b1](https://github.com///commit/f6802b1d99c6d48617a76ad35a1a97c0175c0c1b))
 - update CHANGELOG.md to reflect recent documentation enhancements and feature additions ([e947d3f](https://github.com///commit/e947d3f413c745e7f03ebd6c777cb1585b18fef1))
 - update CHANGELOG.md to include recent documentation updates and feature additions ([b062aac](https://github.com///commit/b062aac3c033638102c7329216e189eaf5e4d8a9))
 - update CHANGELOG.md with recent feature additions and improvements ([f624c2c](https://github.com///commit/f624c2c44f3366bbd05e54bcf39e94e392d4fc40))
@@ -87,6 +90,18 @@
 
 ### Code Refactoring
 
+- enhance file reading functions in helper.py to support Path objects and add JSON loading functionality ([f113f9a](https://github.com///commit/f113f9abef93ef20738b4982bae2bc9e72492daf))
+- restructure configuration in config.py to use dataclasses for better organization ([bee53d6](https://github.com///commit/bee53d6abbc96b48b0c44d3b871d7277988bef2a))
+- update file paths in 02_thu_05_embedding.py to use centralized configuration ([d11a16e](https://github.com///commit/d11a16ed0f89be9d59805cdcce3758da0ae37898))
+- update file paths in 02_thu_04_id2word.py to use centralized configuration ([51c19ac](https://github.com///commit/51c19ac6d248ff2ff3e047d403fd46a5213087da))
+- update file paths in 02_thu_03_re.py to use centralized configuration ([5001ff6](https://github.com///commit/5001ff6c076f1baf2d08522b62cd8dccb17a0fd1))
+- update file paths in 02_thu_02_stopwords.py to use centralized configuration ([0835be1](https://github.com///commit/0835be1a42c7992d5ce0243fae935b8baf95b912))
+- update file path configuration in 02_thu_01_cut.py to use centralized config ([810240c](https://github.com///commit/810240cf8c1dfc7ee7d716f51f6160216f304cc5))
+- update file paths in jieba embedding script to use centralized configuration ([9623021](https://github.com///commit/9623021ebcd618f52c250adb91f042cb1e5293fa))
+- update file paths in id2word script to use centralized configuration ([b2ccb55](https://github.com///commit/b2ccb55f0e46d457de9d0cb23772050277f48daa))
+- update file paths in jieba script to use centralized configuration ([416e195](https://github.com///commit/416e1956fca0711d4ed6d624bb4f98553457b7fb))
+- update file paths in jieba stopwords script for improved configuration ([084b813](https://github.com///commit/084b813d894232a7fea914c55990d8b07b889799))
+- update file path configuration in main function ([e8e84ab](https://github.com///commit/e8e84ab77e53ad10c1ff714705fdb54e9ff6feb8))
 - rename cut_segmentation to cut_pos for clarity ([6fff219](https://github.com///commit/6fff2190e0c6736f8062141999ac1498bbffffea))
 - remove unused imports and streamline main function ([9f17e86](https://github.com///commit/9f17e8602af06a12c96d222f4889e017e491ef09))
 - remove outdated data structure details from README.md ([d17a49a](https://github.com///commit/d17a49a9830fba6287f1daad1461eeeaa3f9f66d))
