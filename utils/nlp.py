@@ -7,7 +7,8 @@
 # @Desc     :
 
 from collections import Counter
-from re import compile
+from pathlib import Path
+from re import compile, sub
 from pandas import DataFrame
 from stanfordnlp import Pipeline, download
 
@@ -103,3 +104,43 @@ def snlp_analysis(content: str, mode: str = "cut", language: str = "zh", is_gpu:
     print(f"StanfordNLP Text Analysis Result:\n{df}")
 
     return result
+
+
+@timer
+def unique_characters(content: str) -> list[str]:
+    """ Get unique words from the list
+    :param content: text content to process
+    :return: list of unique words
+    """
+    chars: list[str] = list(content)
+    # Get unique words by converting the list to a set and back to a sorted list
+    # - sort based on Unicode code point order
+    unique: list[str] = list(sorted(set(chars)))
+
+    print(f"Extracted {len(unique)} unique words from the original {len(chars)} words.")
+
+    return unique
+
+
+@timer
+def extract_zh_chars(filepath: str | Path, pattern: str = r"[^\u4e00-\u9fa5]") -> tuple[list, list]:
+    """ Get Chinese characters from the text content
+    :param filepath: path to the text file
+    :param pattern: regex pattern to remove unwanted characters
+    :return: list of Chinese characters
+    """
+    chars: list[str] = []
+    lines: list[str] = []
+    with open(str(filepath), "r", encoding="utf-8") as file:
+        for line in file:
+            line = sub(pattern, "", line).strip()
+            if not line:
+                continue
+            lines.append(line)
+            for word in list(line):
+                chars.append(word)
+
+    print(f"Total number of Chinese characters: {len(chars)}")
+    print(f"Total number of lines in the Chinese content: {len(lines)}")
+
+    return chars, lines
