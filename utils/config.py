@@ -45,7 +45,7 @@ CONFIGRATION: SimpleNamespace = SimpleNamespace(
 
 @dataclass
 class FilePaths:
-    MODEL_SAVE: Path = BASE_DIR / "models/model_seq.pth"
+    SAVED_MODEL: Path = BASE_DIR / "models/model_seq.pth"
     EXAMPLE_PAPER_ZH: Path = BASE_DIR / "data/Chinese.txt"
     EXAMPLE_STOPWORDS_ZH: Path = BASE_DIR / "data/stopwords4background.txt"
     POEMS_JSON: Path = BASE_DIR / "data/poems.json"
