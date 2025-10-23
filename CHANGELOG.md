@@ -5,6 +5,7 @@
 
 ### Features
 
+- add BSD 3-Clause License file ([d38231d](https://github.com///commit/d38231d3fc04f9d3c959efe40d07587eee2a2fb6))
 - add temperature sampling for character prediction in predictor.py ([e734a67](https://github.com///commit/e734a67cf98edbf65cde3c27b715871dc752da5e))
 - implement main function for Fashion MNIST prediction using a trained model ([bca6404](https://github.com///commit/bca6404d9b6d689904224afd0740f9b144899528))
 - update preprocess_data function to return additional data and improve token handling ([5fd43ab](https://github.com///commit/5fd43ab4b7acafb4a2b30482b0df091fe95c1284))
@@ -81,6 +82,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include temperature sampling feature for character prediction ([572b320](https://github.com///commit/572b320c40deca8459fdd9e416751ffbf91256ea))
 - update CHANGELOG.md to include recent feature additions and improvements ([61a9ae5](https://github.com///commit/61a9ae5595fb15ebdd3fac12f08692ef76180b00))
 - update CHANGELOG.md to include recent feature additions and bug fixes ([fa4a0c9](https://github.com///commit/fa4a0c9a387185f77d38b7e9d8319c4ffa5ac5d8))
 - update CHANGELOG.md to include recent bug fixes and feature enhancements ([f6802b1](https://github.com///commit/f6802b1d99c6d48617a76ad35a1a97c0175c0c1b))
