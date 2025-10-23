@@ -20,7 +20,7 @@ from utils.PT import (SequentialTorchDataset, TorchDataLoader,
 from utils.trainer import TorchTrainer
 
 
-def preprocess_data() -> tuple[list[int], dict[str, int], int]:
+def preprocess_data() -> tuple[list[int], list[str], dict[str, int], int, int]:
     """ Data Preparation Function """
     # Get file content
     raw: str = read_file(CONFIG.FILEPATHS.POEMS)
@@ -37,27 +37,28 @@ def preprocess_data() -> tuple[list[int], dict[str, int], int]:
     # Transform list of unique characters to a dictionary
     dictionary: dict[str, int] = {char: index for index, char in enumerate(unique_chars)}
     # print(dictionary)
-    pad_token: int = dictionary[unique_chars[0]]
-    # print(pad_token)
+    token_pad: int = dictionary[unique_chars[0]]
+    # print(token_pad)
 
     # Extract poem characters and lines
     poems, _ = extract_zh_chars(CONFIG.FILEPATHS.POEMS, pattern)
 
     # Build poems2id sequences
+    token_unk: int = dictionary[unique_chars[1]]
     sequences: list = []
     for word in poems:
-        word_index: int = dictionary.get(word, dictionary[unique_chars[1]])
+        word_index: int = dictionary.get(word, token_unk)
         sequences.append(word_index)
     # print(f"Total number of poem sequences: {len(sequences)}")
     # print(sequences[:50])
 
-    return sequences, dictionary, pad_token
+    return sequences, unique_chars, dictionary, token_pad, token_unk
 
 
 def prepare_data():
     """ Data Preparation Wrapper Function """
     # Get preprocessed data
-    sequences, dictionary, pad_token = preprocess_data()
+    sequences, _, dictionary, pad_token, _ = preprocess_data()
     # pprint({
     #     "sequences_sample": sequences[:5],
     #     "dictionary_sample": dict(list(dictionary.items())[:5]),
@@ -107,7 +108,7 @@ def main() -> None:
             train_loader=loader,
             valid_loader=loader,
             epochs=CONFIG.HYPERPARAMETERS.EPOCHS,
-            model_save_path=str(CONFIG.FILEPATHS.MODEL_SAVE),
+            model_save_path=str(CONFIG.FILEPATHS.SAVED_MODEL),
         )
 
 
