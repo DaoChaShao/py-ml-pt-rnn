@@ -5,6 +5,8 @@
 
 ### Features
 
+- implement main function for Fashion MNIST prediction using a trained model ([bca6404](https://github.com///commit/bca6404d9b6d689904224afd0740f9b144899528))
+- update preprocess_data function to return additional data and improve token handling ([5fd43ab](https://github.com///commit/5fd43ab4b7acafb4a2b30482b0df091fe95c1284))
 - add a trained sequential model_seq.pth for sequence generation prediction ([1517d19](https://github.com///commit/1517d196c40aff3a210c7acc7e7396d1a0f0386f))
 - implement TorchTrainer class for managing training and validation processes ([06a241d](https://github.com///commit/06a241d4155e2a954f06fdf29e028399bf9ec111))
 - add SequentialTorchDataset class for handling sequential features and labels ([4f256c8](https://github.com///commit/4f256c8121dfccabccb95b940ef930927591cd37))
@@ -73,10 +75,12 @@
 
 ### Bug Fixes
 
+- rename MODEL_SAVE to SAVED_MODEL for clarity in file paths ([f2bd18e](https://github.com///commit/f2bd18e8d2cfc4d4d35b4705ef12ecdfa040095c))
 - update import and function call for POS tagging in 02_thu_01_cut.py ([7d595be](https://github.com///commit/7d595beb2a44de2548001cf07813f088c6cd8f70))
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature additions and improvements ([3812d35](https://github.com///commit/3812d355efc6428acbc8d013b22a1194b7aeef44))
 - update CHANGELOG.md to include recent feature additions and bug fixes ([fa4a0c9](https://github.com///commit/fa4a0c9a387185f77d38b7e9d8319c4ffa5ac5d8))
 - update CHANGELOG.md to include recent bug fixes and feature enhancements ([f6802b1](https://github.com///commit/f6802b1d99c6d48617a76ad35a1a97c0175c0c1b))
 - update CHANGELOG.md to reflect recent documentation enhancements and feature additions ([e947d3f](https://github.com///commit/e947d3f413c745e7f03ebd6c777cb1585b18fef1))
@@ -90,6 +94,8 @@
 
 ### Docs
 
+- remove outdated large file storage instructions from README.zh-CN.md ([a252484](https://github.com///commit/a25248483e31e69fab8b74eefd05c4caeb6beb1d))
+- remove outdated sections on large file storage instructions from README.md ([1604393](https://github.com///commit/16043934632af3696c6d94f68aa854bbac41c200))
 - enhance README.md with improved formatting for RNN project overview ([6bc4687](https://github.com///commit/6bc468774d8cadc10f4b0fe70b0a85b533b49538))
 - enhance project overview in README.zh-CN.md with improved formatting and clarity ([f7ab145](https://github.com///commit/f7ab145400161b6822b72e4cca322e9c7f963055))
 - update README.zh-CN.md to enhance project overview and clarify RNN implementation details ([445ff93](https://github.com///commit/445ff93b892e4f191cdb1e8aec6e5c41caba511c))
