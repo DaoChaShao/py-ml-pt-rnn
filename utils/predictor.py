@@ -10,7 +10,7 @@ from pathlib import Path
 from random import randint
 from torch import (tensor, load,
                    Tensor, long,
-                   softmax)
+                   softmax, multinomial)
 
 from main import preprocess_data
 from utils.config import CONFIG
@@ -63,12 +63,23 @@ def main() -> None:
 
                 # Get the last time step's predictions, which means the next character prediction
                 final_time_step = predictions[0, -1, :]
+
+                # -------------------- Temperature Sampling --------------------
+                # Scale the logits by temperature: 1.0 is default, 1.2 is more random, 0.8 is more conservative
+                temperature = 1.0
+                scaled_logits = final_time_step / temperature
+                probs = softmax(scaled_logits, dim=-1)
+                next_index = multinomial(probs, num_samples=1)
+                # -------------------- End Temperature Sampling ----------------
+
+                # -------------------- Greedy Sampling -------------------------
                 # Get the probabilities distribution using softmax
-                probs = softmax(final_time_step, dim=-1)
+                # probs = softmax(final_time_step, dim=-1)
+                # Get the max probability index
+                # _, next_index = probs.max(dim=-1)
+                # -------------------- End Greedy Sampling ---------------------
                 # print(probs)
 
-                # Get the max probability index
-                _, next_index = probs.max(dim=-1)
                 # print(next_index)
                 next_char = unique_chars[next_index.item()]
                 # print(f"Step {i + 1}: Predicted next character: '{next_char}'")
